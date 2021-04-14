@@ -2,7 +2,7 @@ import random
 
 #separate text into a list of sentences and punctuations
 def separate_text(txt):
-    separators = [",", ".", "!", "?"]
+    separators = [".", "!", "?"]
 
     sentence_list = []
     punctuation_list = []
@@ -49,9 +49,9 @@ def nanofy(txt):
     last_index = len(sentence_list) - 1
     sentence_list[last_index] = sentence_list[last_index] + " nanora" 
 
-    #add nanora to the other sentences at 30% chance
+    #add nanora to the other sentences at 50% chance
     for i in range(len(sentence_list) - 1):
-        if random.random() < 0.3:
+        if random.random() < 0.5:
             sentence_list[i] = sentence_list[i] + " nanora"
 
     #match lists size
