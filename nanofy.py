@@ -32,7 +32,12 @@ def separate_text(txt):
                 punctuation_list.append(item_to_add)
                 item_to_add = txt[i]
                 current_list = 0
-    
+
+    if current_list == 0:
+        sentence_list.append(item_to_add)
+    else:
+        punctuation_list.append(item_to_add)
+
     return (sentence_list, punctuation_list)
 
 #randomly add nanora to all sentences of the text
